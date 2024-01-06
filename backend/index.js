@@ -8,11 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use(
-  cors({
-    origin: ["https://inksanctuary-frontend.vercel.app"],
-    methods: ["POST", "GET", "DELETE", "PUT"],
-    credentials: true,
-  })
+  cors()
 );
 
 app.get("/", (request, response) => {
