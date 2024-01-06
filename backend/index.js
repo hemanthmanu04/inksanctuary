@@ -7,7 +7,13 @@ import cors from "cors";
 const app = express();
 app.use(express.json());
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https/"],
+    methods: ["POST", "GET", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
 
 app.get("/", (request, response) => {
   console.log(request);
