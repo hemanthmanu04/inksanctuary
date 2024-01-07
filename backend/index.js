@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://inksanctuary-frontend.vercel.app/"],
+    origin: ["https://inksanctuary-frontend.vercel.app"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true,
   })
