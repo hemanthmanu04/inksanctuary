@@ -8,7 +8,11 @@ const app = express();
 app.use(express.json());
 
 app.use(
-  cors()
+  cors({
+    origin:"*",
+    methods:["POST","PUT","GET","DELETE"],
+    allowHeaders:["Content-Type"],
+  })
 );
 
 app.get("/", (request, response) => {
